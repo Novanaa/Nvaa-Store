@@ -2,28 +2,11 @@ import React, { useEffect, useState } from "react";
 import "../styles/Navbar.css";
 import { useNavigate } from "react-router-dom";
 import Menu from "../assests/feather/menu.svg";
-import Hero from "./Hero";
+import cart from "../assests/feather/shopping-cart.svg";
 
 function Navbar() {
   const navigate = useNavigate();
   const [values, setValues] = useState(false);
-
-  // let navList = document.getElementById("navList");
-  // let menu = document.getElementById("menu");
-  // const mainBtn = () => {
-  //   navList.classList.toggle("active");
-  //   menu.classList.toggle("activeMenu");
-  //   console.log("test");
-  //   setValues(true);
-  // };
-
-  // useEffect(() => {
-  //   mainBtn();
-  // });
-
-  // const mainBtn = () => {
-  //   setValues(!values);
-  // };
 
   return (
     <>
@@ -65,12 +48,16 @@ function Navbar() {
                 <li className="li-nav" onClick={() => navigate("/store")}>
                   Store
                 </li>
+                <img src={cart} alt="cart" className="navCart" />
                 <input
                   type="search"
                   placeholder="Search products"
                   id="navInput"
                 />
               </ul>
+              <div className="navCartMenuWrapper">
+                <div className="navCartMenu"></div>
+              </div>
             </nav>
           </nav>
         </nav>

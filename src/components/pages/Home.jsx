@@ -5,7 +5,6 @@ import Hero from "../pagesComponent/Hero";
 function Home() {
   return (
     <>
-      {/* <Api /> */}
       <Navbar />
       <Hero />
     </>

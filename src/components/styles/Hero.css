@@ -1,1 +1,47 @@
 /* hero Style inside here!!! */
+
+/* heroCube */
+.heroCubeWrapper {
+  display: flex;
+  /* filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.5)); */
+}
+
+/* heroBackground */
+.heroBackgroundWrapper {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  filter: blur(2.8rem);
+  overflow: hidden;
+}
+.heroBackground {
+  margin-right: -5rem;
+  position: relative;
+  z-index: -5;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+}
+.heroBackground {
+  background: hsla(302, 82%, 76%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(302, 82%, 76%, 1) 0%,
+    hsla(258, 40%, 68%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(302, 82%, 76%, 1) 0%,
+    hsla(258, 40%, 68%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(302, 82%, 76%, 1) 0%,
+    hsla(258, 40%, 68%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#f492f0", endColorstr="#a18dce", GradientType=1 );
+}

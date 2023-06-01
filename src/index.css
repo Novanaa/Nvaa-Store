@@ -42,3 +42,23 @@ span::selection {
     );
   }
 }
+@media screen and (max-width: 393px) {
+  body {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      60deg,
+      rgb(240, 245, 246) 40%,
+      rgba(128, 0, 128, 0.2) 100%
+    );
+  }
+}
+@media screen and (max-width: 375px) {
+  body {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      60deg,
+      rgb(240, 245, 246) 50%,
+      rgba(128, 0, 128, 0.2) 100%
+    );
+  }
+}

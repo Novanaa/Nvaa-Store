@@ -15,10 +15,9 @@
 .ul-nav {
   opacity: 0.7;
   display: flex;
-  gap: 3rem;
+  gap: 2.5rem;
   justify-content: end;
   font-size: 1rem;
-  transition: all 0.5s 0.5s;
 }
 .li-nav:hover {
   color: rgb(87, 2, 87);
@@ -28,7 +27,9 @@
   margin-top: 0.47rem;
   display: flex;
 }
-
+.navCart {
+  cursor: pointer;
+}
 .ul-nav input {
   margin-top: 0.09rem;
   font-size: 0.72rem;
@@ -36,7 +37,8 @@
   padding: 1.15rem;
   border-radius: 5px;
   transition: all 0.5s 0.5;
-  box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 6px 6px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgb(87, 2, 87);
 }
 input::selection {
   background-color: rgb(218, 1, 218);
@@ -89,13 +91,24 @@ input:focus {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     margin-left: 8rem;
-    width: 75%;
-    margin-top: -3.3rem;
+    width: 60%;
+    margin-top: -3.6rem;
     height: 100vh;
-    z-index: 0;
+    z-index: 1;
+    position: absolute;
+    animation: navAnimation 1s ease;
   }
+
+  @keyframes navAnimation {
+    from {
+      transform: translateX(110%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+
   .active {
-    transition: transform 1s;
     display: block;
     transform: translateX(0%);
   }
@@ -111,20 +124,23 @@ input:focus {
     gap: 1.2rem;
     align-items: end;
   }
+  .navCart {
+    display: none;
+  }
   .li-nav {
-    margin-right: 6rem;
+    margin-right: 6.2rem;
   }
   .ul-nav input {
     width: 60%;
     font-size: 0.7rem;
     box-shadow: 6px 6px rgba(0, 0, 0, 0.2);
     border: 1px solid rgb(87, 2, 87);
-    margin-right: 2.2rem;
+    margin-right: 2.6rem;
   }
   .menuImages {
     display: block;
     margin-top: 0.5rem;
-    z-index: 2;
+    z-index: 3;
   }
   .opacityActive {
     opacity: 0.8;
@@ -141,14 +157,20 @@ input:focus {
 
 /* mobile-393px */
 @media screen and (max-width: 393px) {
+  .navbarListWrapper {
+    width: 56.5%;
+  }
   .navbarWrapper {
     margin: 1.5rem 2.8rem;
   }
   .navbarBrand {
     font-size: 1.3rem;
   }
+  .li-nav {
+    margin-right: 4.9rem;
+  }
   .ul-nav input {
-    margin-right: 2.8rem;
+    margin-right: 2.2rem;
   }
   .menuImages {
     display: block;
@@ -162,14 +184,17 @@ input:focus {
     margin: 1.5rem 2.3rem;
   }
   .navbarListWrapper {
-    width: 80%;
+    width: 60%;
     margin-left: 7rem;
   }
   .ul-nav {
     margin-top: 6.5rem;
   }
+  .ul-nav input {
+    margin-right: 2.1rem;
+  }
   .li-nav {
-    margin-right: 6rem;
+    margin-right: 4.9rem;
   }
 }
 
@@ -192,9 +217,10 @@ input:focus {
     margin-left: 6rem;
   }
   .li-nav {
-    margin-right: 4.6rem;
+    margin-right: 4.1rem;
   }
   .ul-nav input {
-    margin-right: 2.1rem;
+    margin-right: 1.6rem;
+    width: 67%;
   }
 }
