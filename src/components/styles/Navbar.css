@@ -1,13 +1,18 @@
 /* navbarStyle inside here!! */
+.navbar {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
 .navbarWrapper {
-  margin: 1.5rem 7rem;
+  margin: 1.5rem 6.5rem;
 }
 .navbarBrand {
   position: absolute;
   font-size: 1.4rem;
   font-weight: 500;
   font-style: italic;
-  z-index: 0;
+  z-index: 2;
   cursor: pointer;
   /* width: 100%; */
   /* border: 2px solid black; */
@@ -54,6 +59,9 @@ input:focus {
 .menuImages {
   display: none;
 }
+.mobileNavCart {
+  display: none;
+}
 
 /* media queries */
 /* minWidth */
@@ -71,6 +79,9 @@ input:focus {
     font-size: 0.9rem;
   }
   .menuImages {
+    display: none;
+  }
+  .mobileNavCart {
     display: none;
   }
 }
@@ -94,7 +105,7 @@ input:focus {
     width: 60%;
     margin-top: -3.6rem;
     height: 100vh;
-    z-index: 1;
+    z-index: 2;
     position: absolute;
     animation: navAnimation 1s ease;
   }
@@ -142,16 +153,23 @@ input:focus {
     margin-top: 0.5rem;
     z-index: 3;
   }
+  .mobileNavCart {
+    margin-top: 0.5rem;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
   .opacityActive {
     opacity: 0.8;
   }
   .opacityInactive {
-    opacity: 0.5;
+    opacity: 0.6;
   }
 
-  .imagesWrapper {
+  .navimagesWrapper {
     display: flex;
     justify-content: end;
+    gap: 1.2rem;
   }
 }
 

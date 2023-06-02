@@ -17,6 +17,7 @@ body {
   background-repeat: no-repeat;
   min-height: 800px;
   cursor: default;
+  z-index: -5;
 }
 
 p::selection {

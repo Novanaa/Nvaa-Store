@@ -1,4 +1,68 @@
 /* hero Style inside here!!! */
+.heroWrapper {
+  padding-top: 11rem;
+}
+
+/* heroHeader */
+.heroSectionContainer {
+  /* style inside here */
+  display: flex;
+  margin: 0rem 6.5rem;
+}
+.heroHeadline {
+  display: flex;
+}
+.heroHeadParagraph {
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.6rem;
+  opacity: 0.8;
+}
+.heroSpan {
+  font-weight: 600;
+  color: purple;
+}
+.heroTaglineWrapper {
+  width: 75%;
+  text-align: center;
+}
+.heroTagline {
+  font-size: 0.9rem;
+  z-index: 1;
+  position: relative;
+}
+.heroBtnWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-left: 2rem;
+}
+
+.heroBtn {
+  color: white;
+  background: rgb(229, 121, 226);
+  width: 18%;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+}
+.secHeroCta {
+  border-radius: 6px;
+  font-size: 0.9rem;
+  width: 18%;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+  padding: 8px;
+  border: 1px solid purple;
+  color: purple;
+}
+
+.mainHeroImages {
+  position: relative;
+  z-index: 1;
+  width: 42rem;
+  filter: drop-shadow(4px 4px rgba(0, 0, 0, 0.2));
+}
 
 /* heroCube */
 .heroCubeWrapper {
@@ -12,14 +76,15 @@
   justify-content: end;
   align-items: end;
   filter: blur(2.8rem);
-  overflow: hidden;
+  overflow-x: clip;
 }
 .heroBackground {
-  margin-right: -5rem;
+  margin-top: -14rem;
+  margin-right: -7rem;
   position: relative;
-  z-index: -5;
-  width: 280px;
-  height: 280px;
+  z-index: -3;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
 }
 .heroBackground {

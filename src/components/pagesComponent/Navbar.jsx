@@ -8,6 +8,10 @@ function Navbar() {
   const navigate = useNavigate();
   const [values, setValues] = useState(false);
 
+  window.addEventListener("scroll", (scroll) => {
+    setValues(false);
+  });
+
   return (
     <>
       <nav className="navbar">
@@ -21,7 +25,8 @@ function Navbar() {
                 Nvaa
               </p>
             </div>
-            <figure className="imagesWrapper">
+            <figure className="navimagesWrapper">
+              <img src={cart} alt="cart" className="mobileNavCart" />
               <img
                 src={Menu}
                 alt="menu"
