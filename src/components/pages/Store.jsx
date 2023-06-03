@@ -1,35 +1,32 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Navbar from "../pagesComponent/Navbar";
-import StorePreview from "../pagesComponent/storePreview";
+import PreviewStore from "../pagesComponent/PreviewStore";
+import { useState, useEffect } from "react";
 
-function Store() {
-  const [products, setProducts] = useState([]);
+function Store(props) {
+  const [allProducts, setAllProducts] = useState([]);
+  const endpoint = import.meta.env.VITE_ENDPOINT;
 
-  const allProductsEndpoint = import.meta.env.VITE_ALL_PRODUCTS_ENDPOINT;
-
-  const allProductsData = async () => {
-    const productsRespone = await fetch(allProductsEndpoint);
-    const productsDatas = await productsRespone.json();
-    setProducts(productsDatas);
-    // console.log(products);
+  const data = async () => {
+    const respone = await fetch(endpoint);
+    const allData = await respone.json();
+    setAllProducts(allData);
   };
 
   useEffect(() => {
-    allProductsData();
+    data();
   }, []);
+
   return (
     <>
       <Navbar />
-      {products.map((datas) => (
-        <StorePreview
-          key={datas.id}
-          title={datas.title}
-          category={datas.category}
-          price={datas.price}
-          description={datas.description}
-          image={datas.image}
-        />
-      ))}
+      <div>
+        {allProducts.map((products) => (
+          <div>
+            <PreviewStore key={products.id} title={products.title} />
+          </div>
+        ))}
+      </div>
     </>
   );
 }

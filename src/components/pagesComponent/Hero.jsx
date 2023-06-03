@@ -3,8 +3,29 @@ import "../styles/Hero.css";
 import cube from "../assests/feather/box.svg";
 import mainImages from "../assests/Images/doument.png";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import {
+  BtnStyle,
+  BackgroundWrapper,
+  Background,
+  CubeStyle,
+  SecondaryBtn,
+  ins,
+  fb,
+} from "../styles/GlobalStyled";
 
 function Hero() {
+  const cubeOneLink = () => {
+    window.open(ins, "_blank");
+  };
+
+  const cubeTwoLink = () => {
+    window.open(fb, "_blank");
+  };
+  const cubeThreeLink = () => {
+    window.open("", "_blank");
+  };
+
   return (
     <>
       <section className="heroSection">
@@ -15,7 +36,7 @@ function Hero() {
               <div className="heroHeaderWrapper">
                 <div className="heroHeadline">
                   <p className="heroHeadParagraph">
-                    <span className="heroSpan">Discover</span> the Ultimate{" "}
+                    <span className="heroSpan">Discover</span> the Ultimate
                     <span className="heroSpan">Shopping Experience</span> <br />
                     Where You Find the Endless Deals
                   </p>
@@ -30,15 +51,17 @@ function Hero() {
                   </p>
                 </div>
                 <div className="heroBtnWrapper">
-                  <button className="heroBtn" type="sumbit">
+                  <BtnStyle className="heroBtn" type="sumbit">
                     <Link to="/store">Let's Started</Link>
-                  </button>
-                  <button className="secHeroCta">Community</button>
+                  </BtnStyle>
+                  <SecondaryBtn className="secHeroCta">Community</SecondaryBtn>
                 </div>
               </div>
               <div className="heroImagesWrapper">
-                <img
+                <LazyLoadImage
                   src={mainImages}
+                  // effect="blur"
+                  placeholderSrc={mainImages}
                   alt="HeroImages"
                   className="mainHeroImages"
                 />
@@ -47,14 +70,29 @@ function Hero() {
 
             {/* heroCube */}
             <div className="heroCubeWrapper">
-              <img src={cube} alt="cubeOne" className="heroCubeOne" />
-              <img src={cube} alt="cubeOne" className="heroCubeTwo" />
-              <img src={cube} alt="cubeOne" className="heroCubeThree" />
+              <CubeStyle
+                src={cube}
+                alt="cubeOne"
+                className="heroCubeOne"
+                onClick={() => cubeOneLink()}
+              />
+              <CubeStyle
+                src={cube}
+                alt="cubeOne"
+                className="heroCubeTwo"
+                onClick={() => cubeTwoLink()}
+              />
+              <CubeStyle
+                src={cube}
+                alt="cubeOne"
+                className="heroCubeThree"
+                onClick={() => cubeThreeLink()}
+              />
             </div>
             {/* heroBlurBackground */}
-            <div className="heroBackgroundWrapper">
-              <div className="heroBackground"></div>
-            </div>
+            <BackgroundWrapper className="heroBackgroundWrapper">
+              <Background className="heroBackground"></Background>
+            </BackgroundWrapper>
           </div>
         </div>
       </section>
