@@ -15,7 +15,7 @@ body {
   );
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 800px;
+  min-height: 1000px;
   cursor: default;
   z-index: -5;
 }

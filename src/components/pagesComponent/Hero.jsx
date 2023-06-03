@@ -37,7 +37,8 @@ function Hero() {
                 <div className="heroHeadline">
                   <p className="heroHeadParagraph">
                     <span className="heroSpan">Discover</span> the Ultimate
-                    <span className="heroSpan">Shopping Experience</span> <br />
+                    <span className="heroSpan">Shopping Experience</span>{" "}
+                    <br className="brHero" />
                     Where You Find the Endless Deals
                   </p>
                 </div>
@@ -60,7 +61,6 @@ function Hero() {
               <div className="heroImagesWrapper">
                 <LazyLoadImage
                   src={mainImages}
-                  // effect="blur"
                   placeholderSrc={mainImages}
                   alt="HeroImages"
                   className="mainHeroImages"
@@ -96,6 +96,7 @@ function Hero() {
           </div>
         </div>
       </section>
+      <p>sgdhbfhysd</p>
     </>
   );
 }

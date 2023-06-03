@@ -31,6 +31,11 @@ export const Background = styled.div`
     hsla(258, 40%, 68%, 1) 100%
   );
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#f492f0", endColorstr="#a18dce", GradientType=1 );
+
+  @media (max-width: 428px) {
+    width: 280px;
+    height: 280px;
+  }
 `;
 
 export const BtnStyle = styled.button`
@@ -41,6 +46,17 @@ export const BtnStyle = styled.button`
   border-radius: 6px;
   font-size: 0.9rem;
   box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 834px) {
+    padding: 6px;
+    font-size: 0.85rem;
+    width: 7.8rem;
+  }
+
+  @media (max-width: 428px) {
+    padding: 7px;
+    width: 7.6rem;
+  }
 `;
 
 export const SecondaryBtn = styled.button`
@@ -51,6 +67,17 @@ export const SecondaryBtn = styled.button`
   padding: 8px;
   border: 1px solid purple;
   color: purple;
+
+  @media (max-width: 834px) {
+    width: 7.8rem;
+    padding: 6px;
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 428px) {
+    padding: 7px;
+    width: 7.6rem;
+  }
 `;
 
 export const CubeStyle = styled.img`

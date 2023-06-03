@@ -7,46 +7,45 @@
 .heroSectionContainer {
   /* style inside here */
   display: flex;
-  margin: 0rem 6.5rem;
+  margin: 0rem 5rem;
 }
 .heroHeadline {
   display: flex;
 }
 .heroHeadParagraph {
-  /* border-left: 1px solid black; */
   font-weight: 500;
   text-align: center;
   font-size: 1.7rem;
   opacity: 0.8;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 }
 .heroSpan {
   font-weight: 600;
   color: purple;
 }
 .heroTaglineWrapper {
-  width: 72%;
+  width: 66%;
   text-align: center;
 }
 .heroTagline {
   margin-top: 0.5rem;
-  margin-left: 0.1rem;
+  margin-left: 2.6rem;
   font-size: 0.9rem;
   z-index: 1;
   position: relative;
 }
 .heroBtnWrapper {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-left: 8.4rem;
+  flex-wrap: row;
+  gap: 1.2rem;
+  margin-left: 9rem;
   margin-top: 1.8rem;
 }
 
 .mainHeroImages {
   position: relative;
   z-index: 1;
-  width: 43rem;
+  width: 45rem;
   filter: drop-shadow(4px 4px rgba(0, 0, 0, 0.2));
   margin-top: -3rem;
   margin-left: -2rem;
@@ -71,7 +70,7 @@
   position: absolute;
   z-index: 0;
   margin-left: 4rem;
-  margin-top: -20rem;
+  margin-top: -22rem;
   rotate: 6deg;
 }
 
@@ -91,10 +90,174 @@
 }
 
 /* mediaQueries */
+/* desktop-1980px */
+@media screen and (min-width: 1980px) {
+  .heroSectionContainer {
+    margin: 0rem 10rem;
+  }
+  .heroHeadParagraph {
+    width: 51%;
+  }
+  .heroBtnWrapper {
+    width: 100%;
+  }
+  .heroBtn .secHeroCta {
+    margin-right: -2rem;
+  }
+  .heroCubeOne {
+    margin-top: -24rem;
+  }
+}
+
+/* desktop-1920px */
+@media screen and (min-width: 1920px) {
+  .heroWrapper {
+    padding-top: 14rem;
+  }
+  .heroSectionContainer {
+    margin: 0rem 22rem;
+  }
+  .heroHeadParagraph {
+    margin-left: -0rem;
+    font-size: 2rem;
+  }
+  .heroTagline {
+    margin-right: 9.4rem;
+    font-size: 1.2rem;
+  }
+  .heroBtnWrapper {
+    margin-left: 9.6rem;
+  }
+  .mainHeroImages {
+    width: 42rem;
+    margin-left: -5rem;
+    margin-top: -4rem;
+    position: relative;
+  }
+}
+
+/* desktop-1600px */
+@media screen and (min-width: 1600px) {
+  .heroSectionContainer {
+    margin: 0rem 8rem;
+  }
+  .mainHeroImages {
+    width: 48rem;
+  }
+  .heroHeadParagraph {
+    font-size: 1.8rem;
+  }
+  .heroTaglineWrapper {
+    width: 60%;
+  }
+  .heroTagline {
+    font-size: 1rem;
+    margin-left: 2rem;
+  }
+  .heroBtnWrapper {
+    margin-left: 9.6rem;
+  }
+
+  /* heroCube */
+  .heroCubeOne {
+    margin-top: -23rem;
+    margin-left: 5rem;
+  }
+  .heroCubeTwo {
+    margin-top: -8rem;
+  }
+  .heroCubeThree {
+    margin-top: -22rem;
+    margin-left: 46rem;
+  }
+}
+
 /* tablet-834px */
 @media screen and (max-width: 834px) {
   .heroSectionContainer {
     margin: 0rem 4rem;
   }
-  
+  .heroTaglineWrapper {
+    width: 88%;
+  }
+  .heroTagline {
+    margin-left: -0.9rem;
+    font-size: 0.85rem;
+  }
+  .heroHeadParagraph {
+    margin-right: 0rem;
+    font-size: 1.2rem;
+    margin-left: 0rem;
+  }
+  .mainHeroImages {
+    margin-top: -1rem;
+    margin-left: 0rem;
+    width: 49rem;
+  }
+  .heroBtnWrapper {
+    margin-left: 4.2rem;
+  }
+  .heroCubeOne {
+    margin-top: -17rem;
+    margin-left: 1.5rem;
+  }
+  .heroCubeTwo {
+    margin-left: 3rem;
+    margin-top: -3rem;
+  }
+  .heroCubeThree {
+    margin-left: 30.5rem;
+  }
+}
+
+/* mobile-428px */
+@media screen and (max-width: 428px) {
+  .heroWrapper {
+    padding-top: 8.5rem;
+  }
+  .heroSectionContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .heroHeadline {
+    width: 110%;
+  }
+  .heroHeadParagraph {
+    margin-left: 0rem;
+    margin-right: 1.72rem;
+  }
+  .heroTaglineWrapper {
+    width: 110%;
+  }
+  .heroTagline {
+    margin-left: -2.2rem;
+    margin-right: 0rem;
+    position: relative;
+    z-index: 0;
+  }
+  .heroBtnWrapper {
+    margin-left: 0.9rem;
+  }
+  .heroCubeWrapper {
+    display: none;
+  }
+
+  .mainHeroImages {
+    z-index: -1;
+    margin-top: 3rem;
+    width: 42rem;
+  }
+  .heroBackgroundWrapper {
+    position: relative;
+    z-index: -5;
+  }
+  .heroBackground {
+    z-index: -5;
+    position: relative;
+    margin-right: -8rem;
+  }
+
+  .brHero {
+    display: none;
+  }
 }
