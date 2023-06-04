@@ -3,7 +3,6 @@ import "../styles/Hero.css";
 import cube from "../assests/feather/box.svg";
 import mainImages from "../assests/Images/doument.png";
 import { Link } from "react-router-dom";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import {
   BtnStyle,
   BackgroundWrapper,
@@ -36,10 +35,9 @@ function Hero() {
               <div className="heroHeaderWrapper">
                 <div className="heroHeadline">
                   <p className="heroHeadParagraph">
-                    <span className="heroSpan">Discover</span> the Ultimate
-                    <span className="heroSpan">Shopping Experience</span>{" "}
-                    <br className="brHero" />
-                    Where You Find the Endless Deals
+                    <span className="heroSpan">Discover</span> Your{" "}
+                    <span className="heroSpan">Path</span> to{" "}
+                    <span className="heroSpan">Success.</span>
                   </p>
                 </div>
                 <div className="heroTaglineWrapper">
@@ -59,9 +57,8 @@ function Hero() {
                 </div>
               </div>
               <div className="heroImagesWrapper">
-                <LazyLoadImage
+                <img
                   src={mainImages}
-                  placeholderSrc={mainImages}
                   alt="HeroImages"
                   className="mainHeroImages"
                 />
@@ -93,10 +90,12 @@ function Hero() {
             <BackgroundWrapper className="heroBackgroundWrapper">
               <Background className="heroBackground"></Background>
             </BackgroundWrapper>
+            <BackgroundWrapper className="mobileHeroBackgroundWrapper">
+              <Background className="mobileHeroBackground"></Background>
+            </BackgroundWrapper>
           </div>
         </div>
       </section>
-      <p>sgdhbfhysd</p>
     </>
   );
 }

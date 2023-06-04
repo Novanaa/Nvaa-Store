@@ -55,7 +55,25 @@ export const BtnStyle = styled.button`
 
   @media (max-width: 428px) {
     padding: 7px;
-    width: 7.6rem;
+    font-size: 0.8rem;
+    width: 7.3rem;
+  }
+
+  @media (max-width: 393px) {
+    width: 7.5rem;
+    padding: 6.5px;
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 375px) {
+    width: 7.3rem;
+    padding: 6px;
+    font-size: 0.75rem;
+  }
+
+  @media (max-width: 320px) {
+    width: 7.5rem;
+    font-size: 0.7rem;
   }
 `;
 
@@ -76,7 +94,25 @@ export const SecondaryBtn = styled.button`
 
   @media (max-width: 428px) {
     padding: 7px;
-    width: 7.6rem;
+    font-size: 0.8rem;
+    width: 7.3rem;
+  }
+
+  @media (max-width: 393px) {
+    width: 7.5rem;
+    padding: 6.5px;
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 375px) {
+    width: 7.3rem;
+    padding: 6px;
+    font-size: 0.75rem;
+  }
+
+  @media (max-width: 320px) {
+    width: 7.5rem;
+    font-size: 0.7rem;
   }
 `;
 
@@ -98,6 +134,28 @@ export const CubeStyle = styled.img`
   }
   &:hover {
     width: 2.6rem;
+  }
+
+  @media (max-width: 834px) {
+    width: 2rem;
+    &:hover {
+      width: 2.4rem;
+    }
+  }
+
+  @media (max-width: 428px) {
+    width: 2rem;
+
+    &:hover {
+      width: 2.4rem;
+    }
+  }
+
+  @media (max-width: 362px) {
+    width: 1.9rem;
+    &:hover {
+      width: 2.3rem;
+    }
   }
 `;
 

@@ -3,6 +3,10 @@
   position: fixed;
   z-index: 1;
   width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
 }
 .navbarWrapper {
   margin: 1.5rem 5.5rem;
@@ -101,43 +105,36 @@ input:focus {
 /* mobile-412px */
 @media screen and (max-width: 428px) {
   .navbarWrapper {
-    margin: 1.5rem 2.8rem;
+    margin: 1.5rem 2.5rem;
+  }
+  .navbarBrand {
+    margin-left: 1rem;
   }
   .navbarListWrapper {
     /* background */
     background: linear-gradient(
       60deg,
-      rgba(255, 255, 255, 1) 53%,
-      rgba(128, 0, 128, 0.13769257703081228) 100%
+      rgba(255, 255, 255, 1) 58%,
+      rgba(128, 0, 128, 0.265) 100%
     );
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     margin-left: 8rem;
     width: 60%;
     margin-top: -3.6rem;
     height: 100vh;
     z-index: 2;
     position: absolute;
-    animation: navAnimation 1s ease;
-  }
-
-  @keyframes navAnimation {
-    from {
-      transform: translateX(110%);
-    }
-    to {
-      transform: translateX(0%);
-    }
+    display: block;
+    transition: 1s;
   }
 
   .active {
-    display: block;
     transform: translateX(0%);
   }
   .inactive {
     transform: translateX(110%);
-    display: none;
   }
   .ul-nav {
     display: block;
@@ -191,9 +188,10 @@ input:focus {
     width: 56.5%;
   }
   .navbarWrapper {
-    margin: 1.5rem 2.8rem;
+    margin: 1.5rem 2.5rem;
   }
   .navbarBrand {
+    margin-left: 0.3rem;
     font-size: 1.3rem;
   }
   .li-nav {
@@ -201,6 +199,9 @@ input:focus {
   }
   .ul-nav input {
     margin-right: 2.2rem;
+  }
+  .mobileNavCart {
+    margin-top: 0.3rem;
   }
   .menuImages {
     display: block;
@@ -243,6 +244,9 @@ input:focus {
 
 /* mobile-320px */
 @media screen and (max-width: 320px) {
+  .navbarWrapper {
+    margin: 1.5rem 2rem;
+  }
   .navbarListWrapper {
     margin-left: 6rem;
   }

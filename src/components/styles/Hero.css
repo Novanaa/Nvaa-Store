@@ -13,15 +13,16 @@
   display: flex;
 }
 .heroHeadParagraph {
-  font-weight: 500;
-  text-align: center;
-  font-size: 1.7rem;
+  font-weight: 600;
+  font-size: 2.2rem;
   opacity: 0.8;
-  margin-left: 0.5rem;
+  color: rgba(0, 0, 0, 0.8);
+  font-style: italic;
+  margin-left: 2.3rem;
 }
 .heroSpan {
-  font-weight: 600;
-  color: purple;
+  font-weight: 700;
+  color: rgb(184, 4, 184);
 }
 .heroTaglineWrapper {
   width: 66%;
@@ -61,6 +62,9 @@
   margin-top: -22rem;
   margin-right: -7rem;
 }
+.mobileHeroBackground {
+  display: none;
+}
 
 /* HeroCube */
 .heroCubeWrapper {
@@ -69,8 +73,8 @@
 .heroCubeOne {
   position: absolute;
   z-index: 0;
-  margin-left: 4rem;
-  margin-top: -22rem;
+  margin-left: 3rem;
+  margin-top: -21rem;
   rotate: 6deg;
 }
 
@@ -146,6 +150,7 @@
   }
   .heroHeadParagraph {
     font-size: 1.8rem;
+    margin-left: 5rem;
   }
   .heroTaglineWrapper {
     width: 60%;
@@ -182,20 +187,20 @@
   }
   .heroTagline {
     margin-left: -0.9rem;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
   }
   .heroHeadParagraph {
     margin-right: 0rem;
-    font-size: 1.2rem;
-    margin-left: 0rem;
+    font-size: 1.4rem;
+    margin-left: 1rem;
   }
   .mainHeroImages {
-    margin-top: -1rem;
+    margin-top: -2rem;
     margin-left: 0rem;
     width: 49rem;
   }
   .heroBtnWrapper {
-    margin-left: 4.2rem;
+    margin-left: 3.3rem;
   }
   .heroCubeOne {
     margin-top: -17rem;
@@ -220,44 +225,164 @@
     flex-direction: column;
   }
   .heroHeadline {
-    width: 110%;
+    white-space: nowrap;
   }
   .heroHeadParagraph {
-    margin-left: 0rem;
-    margin-right: 1.72rem;
+    font-size: 1.3rem;
+    margin-left: -0.62rem;
   }
   .heroTaglineWrapper {
     width: 110%;
   }
   .heroTagline {
-    margin-left: -2.2rem;
-    margin-right: 0rem;
-    position: relative;
-    z-index: 0;
+    margin-left: -1.5rem;
   }
   .heroBtnWrapper {
-    margin-left: 0.9rem;
+    margin-left: 1.5rem;
   }
-  .heroCubeWrapper {
-    display: none;
+  .heroImagesWrapper {
+    width: 16.5rem;
   }
-
   .mainHeroImages {
-    z-index: -1;
-    margin-top: 3rem;
-    width: 42rem;
-  }
-  .heroBackgroundWrapper {
-    position: relative;
-    z-index: -5;
+    margin-top: 2rem;
+    margin-left: 0.2rem;
   }
   .heroBackground {
-    z-index: -5;
-    position: relative;
-    margin-right: -8rem;
+    z-index: -999;
   }
 
-  .brHero {
-    display: none;
+  .mobileHeroBackgroundWrapper {
+    position: absolute;
+    margin-left: -8rem;
+    margin-top: -35rem;
+    z-index: -5;
+    opacity: 0.7;
+  }
+  .mobileHeroBackground {
+    display: block;
+    position: absolute;
+  }
+  .heroCubeThree {
+    margin-left: 22.5rem;
+    z-index: 1;
+  }
+}
+
+/* mobile-393px */
+@media screen and (max-width: 393px) {
+  .heroWrapper {
+    padding-top: 7rem;
+  }
+  .heroHeadline {
+    width: 100%;
+    margin-left: -0.8rem;
+  }
+  .heroHeadParagraph {
+    font-size: 1.25rem;
+  }
+  .heroTaglineWrapper {
+    width: 110%;
+    margin-left: 0.2rem;
+  }
+  .heroTagline {
+    font-size: 0.75rem;
+  }
+  .heroBtnWrapper {
+    margin-left: 0.5rem;
+  }
+  .heroImagesWrapper {
+    width: 16rem;
+  }
+  .mainHeroImages {
+    margin-top: 2rem;
+    margin-left: -0.2rem;
+  }
+  .heroCubeOne {
+    margin-top: -16rem;
+    margin-left: 2rem;
+  }
+  .heroCubeTwo {
+    margin-top: -2rem;
+    margin-left: 3.2rem;
+  }
+  .heroCubeThree {
+    margin-left: 21.5rem;
+  }
+}
+
+/* mobile-375px */
+@media screen and (max-width: 375px) {
+  .heroHeadParagraph {
+    margin-left: -1rem;
+    font-size: 1.2rem;
+  }
+  .heroTaglineWrapper {
+    width: 120%;
+  }
+  .heroTagline {
+    margin-left: -3.4rem;
+    font-size: 0.7rem;
+  }
+  .heroBtnWrapper {
+    margin-left: 0rem;
+  }
+  .heroImagesWrapper {
+    width: 14.5rem;
+  }
+  .mainHeroImages {
+    margin-left: -0.2rem;
+  }
+  .mobileHeroBackgroundWrapper {
+    margin-top: -33rem;
+  }
+  .heroBackground {
+    margin-top: -14rem;
+  }
+  .heroCubeOne {
+    margin-top: -14.5rem;
+  }
+  .heroCubeThree {
+    margin-left: 20rem;
+  }
+}
+
+/* mobile-362px */
+@media screen and (max-width: 362px) {
+  .heroHeadParagraph {
+    margin-left: -1.4rem;
+  }
+  .heroBtnWrapper {
+    margin-top: 1.5rem;
+  }
+  .mainHeroImages {
+    margin-left: -0.55rem;
+  }
+  .heroCubeThree {
+    margin-left: 19.5rem;
+  }
+}
+
+/* mobile-320px */
+@media screen and (max-width: 320px) {
+  .heroWrapper {
+    padding-top: 6.5rem;
+  }
+  .heroHeadParagraph {
+    font-size: 1.05rem;
+  }
+  .heroImagesWrapper {
+    width: 13.2rem;
+  }
+  .mainHeroImages {
+    margin-left: -1.1rem;
+  }
+  .heroTagline {
+    margin-left: -2.5rem;
+  }
+  .heroCubeTwo {
+    margin-left: 2rem;
+  }
+  .heroCubeThree {
+    margin-left: 17rem;
   }
 }
