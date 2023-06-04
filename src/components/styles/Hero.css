@@ -109,7 +109,7 @@
     margin-right: -2rem;
   }
   .heroCubeOne {
-    margin-top: -24rem;
+    margin-top: -30rem;
   }
 }
 
@@ -142,6 +142,9 @@
 
 /* desktop-1600px */
 @media screen and (min-width: 1600px) {
+  .heroWrapper {
+    padding-top: 13rem;
+  }
   .heroSectionContainer {
     margin: 0rem 8rem;
   }
@@ -165,8 +168,8 @@
 
   /* heroCube */
   .heroCubeOne {
-    margin-top: -23rem;
-    margin-left: 5rem;
+    margin-top: -24rem;
+    margin-left: 10rem;
   }
   .heroCubeTwo {
     margin-top: -8rem;

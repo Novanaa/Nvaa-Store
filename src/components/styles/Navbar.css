@@ -69,6 +69,13 @@ input:focus {
 /* media queries */
 /* minWidth */
 /* desktop-1980px */
+@media screen and (min-width: 1980px) {
+  .navbarWrapper {
+    margin: 1.5rem 20rem;
+  }
+}
+
+/* desktop-1920px */
 @media screen and (min-width: 1920px) {
   .navbarWrapper {
     margin: 1.5rem 20rem;
@@ -78,7 +85,7 @@ input:focus {
 /* desktop-1600px */
 @media screen and (min-width: 1600px) {
   .navbarWrapper {
-    margin: 1.5rem 8rem;
+    margin: 1.5rem 10rem;
   }
 }
 
@@ -232,13 +239,16 @@ input:focus {
 /* mobile-362px */
 @media screen and (max-width: 362px) {
   .navbarWrapper {
-    margin: 1.5rem 2.3rem;
+    margin: 1.5rem 2rem;
   }
   .navbarBrand {
     font-size: 1.3rem;
   }
   .menuImages {
     width: 1.45rem;
+  }
+  .ul-nav input {
+    width: 66%;
   }
 }
 

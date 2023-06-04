@@ -106,7 +106,7 @@ export const SecondaryBtn = styled.button`
 
   @media (max-width: 375px) {
     width: 7.3rem;
-    padding: 6px;
+    padding: 7px;
     font-size: 0.75rem;
   }
 
