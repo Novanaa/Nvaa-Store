@@ -33,6 +33,10 @@ span::selection {
   color: white;
 }
 
+span {
+  color: rgb(184, 4, 184);
+}
+
 @media screen and (max-width: 428px) {
   body {
     background: rgb(255, 255, 255);

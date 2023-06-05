@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../pagesComponent/Navbar";
-import PreviewStore from "../pagesComponent/PreviewStore";
 import { useState, useEffect } from "react";
+import PreviewStore from "../pagesComponent/PreviewStore";
 
 function Store(props) {
   const [allProducts, setAllProducts] = useState([]);
@@ -20,15 +20,21 @@ function Store(props) {
   return (
     <>
       <Navbar />
-      <div>
-        {allProducts.map((products) => (
-          <div>
-            <PreviewStore key={products.id} title={products.title} />
-          </div>
-        ))}
-      </div>
+      {allProducts.map((products) => (
+        <ProdutcsPreview key={products.id} title={products.title} />
+      ))}
     </>
   );
 }
+
+export const ProdutcsPreview = (props) => {
+  return (
+    <>
+      <div className="mt-20">
+        <p>{props.title}</p>
+      </div>
+    </>
+  );
+};
 
 export default Store;

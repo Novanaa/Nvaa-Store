@@ -1,7 +1,6 @@
 /* Credit Styles Inside Here!! */
 .credit {
   margin-top: 20rem;
-
   background: rgb(255, 255, 255);
   background: linear-gradient(
     40deg,
@@ -9,8 +8,18 @@
     rgba(128, 0, 128, 0.19) 100%
   );
   padding: 7rem;
+  position: relative;
+  z-index: 0;
+}
+.creditWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0rem 12rem;
 }
 .creditHeadline {
+  font-weight: 500;
+  opacity: 0.7;
+  font-size: 1.8rem;
   text-align: center;
 }
 .creditDescription {
@@ -18,9 +27,237 @@
   text-align: center;
 }
 .creditBtnWrapper {
+  z-index: 1;
+  position: relative;
   gap: 1rem;
   margin-top: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.creditCubeWrapper {
+  z-index: 1;
+  position: absolute;
+}
+.creditCubeImagesOne {
+  position: absolute;
+  margin-top: -3rem;
+  rotate: 6deg;
+  margin-left: 5rem;
+}
+.creditCubeImagesTwo {
+  margin-top: 10rem;
+  margin-left: 7rem;
+  rotate: -6deg;
+  position: absolute;
+}
+.creditCubeImagesThree {
+  margin-left: 40rem;
+}
+.creditBackgroundWrapper {
+  opacity: 0.8;
+  position: absolute;
+  z-index: -1;
+  margin-left: 10rem;
+  margin-top: -4rem;
+}
+
+/* Media Queries */
+/* min-width */
+/* dektop-1980px */
+@media screen and (min-width: 1980px) {
+  .creditWrapper {
+    margin: 0rem 20rem;
+  }
+  .creditHeadline {
+    font-size: 2.1rem;
+  }
+  .creditDescription {
+    font-size: 1.2rem;
+  }
+  .creditCubeWrapper {
+    margin-left: 13rem;
+    margin-top: 0.5rem;
+  }
+  .creditBackgroundWrapper {
+    margin-left: 23rem;
+    margin-top: -3rem;
+  }
+}
+
+/* desktop-1920px */
+@media screen and (min-width: 1920px) {
+  .creditWrapper {
+    margin: 0rem 25rem;
+  }
+  .creditHeadline {
+    font-size: 2.1rem;
+  }
+  .creditCubeWrapper {
+    margin-left: 5rem;
+  }
+  .creditBackgroundWrapper {
+    margin-left: 16.5rem;
+  }
+}
+
+/* desktop-1600px */
+@media screen and (min-width: 1600px) {
+  .creditWrapper {
+    margin: 0rem 16rem;
+  }
+  .creditHeadline {
+    font-size: 2rem;
+  }
+  .creditDescription {
+    font-size: 1.2rem;
+  }
+  .creditCubeWrapper {
+    margin-left: 4.5rem;
+  }
+  .creditBackgroundWrapper {
+    margin-left: 15rem;
+  }
+}
+
+/* Media Queries */
+/* max-width */
+
+/* mobile-834px */
+@media screen and (max-width: 834px) {
+  .creditWrapper {
+    margin: 0rem 1rem;
+  }
+  .creditCubeWrapper {
+    margin-left: -3.5rem;
+    margin-top: 0rem;
+  }
+  .creditHeadline {
+    font-size: 1.5rem;
+  }
+  .creditDescription {
+    font-size: 0.75rem;
+  }
+}
+
+/* mobile-428px */
+@media screen and (max-width: 428px) {
+  .credit {
+    padding: 5rem;
+    margin-top: 13rem;
+  }
+  .creditWrapper {
+    margin: 0rem -2.5rem;
+  }
+  .creditHeadlineWrapper {
+    width: 100%;
+  }
+  .creditHeadline {
+    font-size: 1.3rem;
+  }
+  .creditDescription {
+    font-size: 0.75rem;
+  }
+  .creditCubeImagesOne {
+    margin-top: -2.5rem;
+    margin-left: 3.5rem;
+  }
+  .creditCubeImagesTwo {
+    margin-left: 2.2rem;
+  }
+  .creditCubeImagesThree {
+    margin-left: 25rem;
+  }
+  .creditBackgroundWrapper {
+    margin-left: 0rem;
+  }
+  .creditBackground {
+    position: absolute;
+  }
+}
+
+/* mobile-393px */
+@media screen and (max-width: 393px) {
+  .credit {
+    margin-top: 12rem;
+  }
+  .creditWrapper {
+    margin: 0rem -3.2rem;
+  }
+  .creditHeadline {
+    font-size: 1.25rem;
+  }
+  .creditCubeImagesOne {
+    margin-left: 3rem;
+  }
+  .creditCubeImagesTwo {
+    margin-top: 11rem;
+    margin-left: 3.8rem;
+  }
+  .creditCubeImagesThree {
+    margin-left: 23rem;
+    margin-top: -0.5rem;
+  }
+}
+
+/* mobile-375px */
+@media screen and (max-width: 375px) {
+  .credit {
+    margin-top: 10rem;
+  }
+  .creditHeadline {
+    font-size: 1.2rem;
+  }
+  .creditDescription {
+    font-size: 0.7rem;
+  }
+  .creditCubeImagesTwo {
+    margin-top: 11rem;
+  }
+  .creditCubeImagesThree {
+    margin-left: 22.5rem;
+  }
+}
+
+/* mobile-362px */
+@media screen and (max-width: 362px) {
+  .credit {
+    margin-top: 10rem;
+  }
+  .creditWrapper {
+    margin: 0rem -3.5rem;
+  }
+  .creditHeadline {
+    font-size: 1.2rem;
+  }
+  .creditDescription {
+    font-size: 0.7rem;
+  }
+  .creditCubeWrapper {
+    margin-left: -4rem;
+  }
+  .creditCubeImagesTwo {
+    margin-top: 12rem;
+    margin-left: 4.5rem;
+  }
+}
+
+/* mobile-320px */
+@media screen and (max-width: 320px) {
+  .credit {
+    margin-top: 8rem;
+    padding: 5rem;
+  }
+  .creditHeadline {
+    font-size: 1.05rem;
+  }
+  .creditDescription {
+    font-size: 0.7rem;
+  }
+  .creditCubeImagesTwo {
+    margin-top: 12.5rem;
+  }
+  .creditCubeImagesThree {
+    margin-left: 20rem;
+  }
 }

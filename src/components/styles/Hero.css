@@ -89,8 +89,9 @@
 .heroCubeThree {
   margin-left: 44rem;
   rotate: 6deg;
-  margin-top: -20rem;
+  margin-top: -15rem;
   z-index: 0;
+  height: 50%;
 }
 
 /* mediaQueries */
@@ -101,6 +102,7 @@
   }
   .heroHeadParagraph {
     width: 51%;
+    margin-top: 2rem;
   }
   .heroBtnWrapper {
     width: 100%;
@@ -108,8 +110,8 @@
   .heroBtn .secHeroCta {
     margin-right: -2rem;
   }
-  .heroCubeOne {
-    margin-top: -30rem;
+  .heroCubeWrapper {
+    margin-top: -1rem;
   }
 }
 
@@ -123,7 +125,7 @@
   }
   .heroHeadParagraph {
     margin-left: -0rem;
-    font-size: 2rem;
+    margin-top: 2rem;
   }
   .heroTagline {
     margin-right: 9.4rem;
@@ -152,6 +154,7 @@
     width: 48rem;
   }
   .heroHeadParagraph {
+    margin-top: 2rem;
     font-size: 1.8rem;
     margin-left: 5rem;
   }
@@ -167,6 +170,9 @@
   }
 
   /* heroCube */
+  .heroCubeWrapper {
+    margin-top: 2rem;
+  }
   .heroCubeOne {
     margin-top: -24rem;
     margin-left: 10rem;
@@ -215,6 +221,7 @@
   }
   .heroCubeThree {
     margin-left: 30.5rem;
+    margin-top: -12.5rem;
   }
 }
 
