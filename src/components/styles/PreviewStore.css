@@ -1,0 +1,84 @@
+/* .cardContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.cardWrapper {
+  width: 20rem;
+  height: 25rem;
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+.cardImagesWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardImages {
+  width: 90%;
+  height: 12rem;
+}
+.cardText {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+.cardTitle {
+  text-overflow: ellipsis;
+  margin-top: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.cardDescription {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.cardCategory {
+  margin: 0.6rem 0rem;
+  text-align: end;
+} */
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-items: center;
+  width: 100%;
+  padding: 9rem;
+  gap: 2rem;
+}
+.cardWrapper {
+  background-color: white;
+  width: 20rem;
+  border-radius: 10px;
+  padding: 2.5rem;
+}
+.cardImagesWrapper {
+  width: 80%;
+  padding: 2rem;
+  margin: 0rem auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cardImages {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+  top: 70px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -moz-transform: translate(-50%, -50%) scale(1);
+  -o-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+}
+.cardTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cardDescription {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

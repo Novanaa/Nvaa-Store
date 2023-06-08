@@ -1,9 +1,9 @@
 import React from "react";
 import Navbar from "../pagesComponent/Navbar";
 import { useState, useEffect } from "react";
-import PreviewStore from "../pagesComponent/PreviewStore";
+import Footer from "../pagesComponent/Footer";
 
-function Store(props) {
+function Store() {
   const [allProducts, setAllProducts] = useState([]);
   const endpoint = import.meta.env.VITE_ENDPOINT;
 
@@ -23,6 +23,7 @@ function Store(props) {
       {allProducts.map((products) => (
         <ProdutcsPreview key={products.id} title={products.title} />
       ))}
+      <Footer />
     </>
   );
 }

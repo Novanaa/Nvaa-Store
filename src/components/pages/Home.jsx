@@ -2,7 +2,8 @@ import React from "react";
 import Navbar from "../pagesComponent/Navbar";
 import Hero from "../pagesComponent/Hero";
 import Credit from "../pagesComponent/Credit";
-import PreviewStore, { ViewDatas } from "../pagesComponent/PreviewStore";
+import PreviewStore from "../pagesComponent/PreviewStore";
+import Footer from "../pagesComponent/Footer";
 
 function Home() {
   return (
@@ -11,7 +12,7 @@ function Home() {
       <Hero />
       <Credit />
       <PreviewStore />
-      <ViewDatas />
+      <Footer />
     </>
   );
 }

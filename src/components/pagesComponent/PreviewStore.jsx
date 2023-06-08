@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { BtnStyle } from "../styles/GlobalStyled";
+import "../styles/PreviewStore.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
@@ -9,68 +9,53 @@ function PreviewStore() {
 
   const [limitProducts, setLimitProducts] = useState([]);
   const previewProducts = async () => {
-    const productsLimitRespone = await fetch(`${endpoint}?limit=5`);
+    const productsLimitRespone = await fetch(`${endpoint}?limit=10`);
     const productsDatas = await productsLimitRespone.json();
     setLimitProducts(productsDatas);
-    // console.log(limitProducts);
   };
 
   useEffect(() => {
     previewProducts();
-  });
+  }, []);
 
-  return (
-    <>
-      {limitProducts.map((productsDatas) => (
-        <div className="flex justify-center items-center m-4">
-          <ViewDatas
-            key={productsDatas.id}
-            title={productsDatas.title}
-            description={productsDatas.description}
-            price={productsDatas.price}
-            category={productsDatas.category}
-            image={productsDatas.image}
-          />
-        </div>
-      ))}
-    </>
-  );
-}
+  const StoreTitle = () => {
+    return <></>;
+  };
 
-export const ViewDatas = (props) => {
-  return (
-    <>
-      <div
-        className="card card-compact w-96 shadow-2xl bg-white rounded-lg cursor-pointer "
-        style={{ padding: "2rem" }}
-      >
-        <figure
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            paddingBottom: "2.5rem",
-          }}
-        >
-          <LazyLoadImage
-            src={props.image}
-            effect="blur"
-            style={{
-              width: "10rem",
-            }}
-          />
-        </figure>
-        <div className="card-body bg-base-100 flex flex-col gap-1">
-          <h2 className="card-title">{props.title}</h2>
-          <p>{props.category}</p>
-          <p>${props.price}</p>
-          <div className="card-actions justify-end">
-            <BtnStyle>Buy Now</BtnStyle>
+  const ResultDatas = () => {
+    return limitProducts.slice(0, 9).map((result, index) => {
+      return (
+        <>
+          <div className="cardWrapper">
+            <div className="cardImagesWrapper">
+              <LazyLoadImage
+                src={result.image}
+                effect="blur"
+                className="cardImages"
+              />
+            </div>
+            {/* <div className="cardText">
+              <p className="cardTitle">{result.title}</p>
+              <p className="cardPrice">${result.price}</p>
+              <p className="cardDescription">{result.description}</p>
+              <p className="cardCategory">{result.category}</p>
+            </div> */}
           </div>
+        </>
+      );
+    });
+  };
+
+  return (
+    <>
+      <div className="cardComponent">
+        <div className="cardContainer">
+          <StoreTitle />
+          <ResultDatas />
         </div>
       </div>
     </>
   );
-};
+}
 
 export default PreviewStore;
