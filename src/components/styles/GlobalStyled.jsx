@@ -11,8 +11,8 @@ export const BackgroundWrapper = styled.div`
 export const Background = styled.div`
   position: relative;
   z-index: -5;
-  width: 300px;
-  height: 300px;
+  width: 18.75rem;
+  height: 18.75rem;
   border-radius: 50%;
   background: hsla(302, 82%, 76%, 1);
   background: linear-gradient(

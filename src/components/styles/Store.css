@@ -1,0 +1,179 @@
+.deactiveProducts {
+  opacity: 0;
+  transform: scale(0);
+}
+.activeProducts {
+  display: flex;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.mainStoreTitleWrapper {
+  position: relative;
+  z-index: -5;
+  width: 100%;
+  background: rgb(128, 0, 128);
+  background: radial-gradient(
+    circle,
+    rgba(128, 0, 128, 0.1) 100%,
+    rgba(240, 245, 246, 1) 100%
+  );
+  padding-top: 12rem;
+  padding-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.mainStoreTitle {
+  font-size: 2.1rem;
+  opacity: 0.8;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+.mainStoreTitleWrapper {
+  font-size: 1.1rem;
+  opacity: 0.7;
+  font-weight: 500;
+}
+.storeCubeImagesWrapper {
+  position: absolute;
+  z-index: 0;
+}
+.storeCubeImagesOne {
+  margin-top: -12rem;
+  margin-left: 25rem;
+  rotate: 6deg;
+  position: absolute;
+}
+.storeCubeImagesTwo {
+  margin-top: -6rem;
+  margin-left: 55rem;
+  rotate: 6deg;
+}
+
+.allProductsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.allProductsTitle {
+  margin-top: 4rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  opacity: 0.7;
+}
+
+.isShowProducts {
+  opacity: 0.8;
+  letter-spacing: 0.15rem;
+}
+
+.cardBtnWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+  margin-top: 1rem;
+}
+
+/* media queries */
+/* desktop-1980px */
+@media screen and (min-width: 1980px) {
+  /* empty */
+}
+
+/* desktop-1920px */
+@media screen and (min-width: 1920px) {
+  .storeCubeImagesOne {
+    margin-left: 34rem;
+  }
+  .storeCubeImagesTwo {
+    margin-left: 68rem;
+  }
+}
+
+/* desktop-1600px */
+@media screen and (min-width: 1600px) {
+  .storeCubeImagesWrapper {
+    margin-left: 7rem;
+  }
+}
+
+/* tablet-834px */
+@media screen and (max-width: 834px) {
+  .storeCubeImagesWrapper {
+    margin-left: -16rem;
+  }
+  .storeCubeImagesOne {
+    margin-left: 27.5rem;
+    margin-top: -11.2rem;
+  }
+  .storeCubeImagesTwo {
+    margin-left: 54rem;
+  }
+  .mainStoreTitle {
+    font-size: 1.7rem;
+  }
+  .mainStoreDescription {
+    font-size: 0.9rem;
+  }
+}
+
+/* mobile-428px */
+@media screen and (max-width: 428px) {
+  .mainStoreTitleWrapper {
+    padding-top: 9rem;
+    padding-bottom: 3.3rem;
+  }
+  .storeCubeImagesWrapper {
+    margin-left: -25rem;
+  }
+  .storeCubeImagesOne {
+  }
+  .storeCubeImagesTwo {
+  }
+  .mainStoreTitle {
+    font-size: 1.38rem;
+  }
+  .mainStoreDescription {
+    font-size: 0.9rem;
+  }
+  .allProductsTitle {
+    margin-top: 2.5rem;
+    font-size: 1.1rem;
+    margin-bottom: -1rem;
+  }
+  .cardBtnWrapper {
+    margin-bottom: 3.5rem;
+    margin-top: -4rem;
+  }
+}
+
+/* mobile-393px */
+@media screen and (max-width: 393px) {
+  /* empty */
+}
+
+/* mobile-375px */
+@media screen and (max-width: 375px) {
+  .mainStoreTitle {
+    font-size: 1.25rem;
+  }
+  .allProductsTitle {
+    margin-top: 3rem;
+  }
+}
+
+/* mobile-362px */
+@media screen and (max-width: 362px) {
+  .mainStoreTitle {
+    font-size: 1.3rem;
+  }
+}
+
+/* mobile-320px */
+@media screen and (max-width: 320px) {
+  /* empty */
+}
