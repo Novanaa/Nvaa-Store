@@ -4,7 +4,12 @@ import { useState, useEffect } from "react";
 import Footer from "../pagesComponent/Footer";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import { BtnStyle, CubeStyle } from "../styles/GlobalStyled";
+import {
+  BtnStyle,
+  CubeStyle,
+  BackgroundWrapper,
+  Background,
+} from "../styles/GlobalStyled";
 import "../styles/PreviewStore.css";
 import "../styles/Store.css";
 import CubeImages from "../assests/feather/box.svg";
@@ -63,6 +68,9 @@ function Store() {
                 <CubeStyle src={CubeImages} className="storeCubeImagesOne" />
                 <CubeStyle src={CubeImages} className="storeCubeImagesTwo" />
               </div>
+              <BackgroundWrapper className="storeBackgroundWrapper">
+                <Background className="storeBackground"></Background>
+              </BackgroundWrapper>
             </div>
           </div>
         </div>
@@ -82,15 +90,17 @@ function Store() {
 
   const CardBtn = () => {
     return (
-      <div
-        className={`cardBtnWrapper ${
-          showValues > 35 ? "deactiveProducts" : "activeProducts"
-        }`}
-      >
-        <BtnStyle type="sumbit" className="cardBtn" onClick={ShowMore}>
-          View More
-        </BtnStyle>
-      </div>
+      <>
+        <div
+          className={`cardBtnWrapper ${
+            showValues > 35 ? "deactiveProducts" : "activeProducts"
+          }`}
+        >
+          <BtnStyle type="sumbit" className="cardBtn" onClick={ShowMore}>
+            View More
+          </BtnStyle>
+        </div>
+      </>
     );
   };
 

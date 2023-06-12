@@ -37,6 +37,7 @@
 }
 .navCart {
   cursor: pointer;
+  margin-top: 0.5rem;
 }
 .ul-nav input {
   margin-top: 0.09rem;

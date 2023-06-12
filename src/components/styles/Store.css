@@ -10,16 +10,16 @@
 
 .mainStoreTitleWrapper {
   position: relative;
-  z-index: -5;
+  z-index: 0;
   width: 100%;
-  background: rgb(128, 0, 128);
+  /* background: rgb(128, 0, 128);
   background: radial-gradient(
     circle,
     rgba(128, 0, 128, 0.1) 100%,
     rgba(240, 245, 246, 1) 100%
-  );
+  ); */
   padding-top: 12rem;
-  padding-bottom: 5rem;
+  padding-bottom: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,6 +39,7 @@
 .storeCubeImagesWrapper {
   position: absolute;
   z-index: 0;
+  margin-top: 3rem;
 }
 .storeCubeImagesOne {
   margin-top: -12rem;
@@ -50,6 +51,18 @@
   margin-top: -6rem;
   margin-left: 55rem;
   rotate: 6deg;
+}
+.storeBackgroundWrapper {
+  position: absolute;
+  z-index: -5;
+  opacity: 0.6;
+}
+.storeBackground {
+  margin-top: -12rem;
+  margin-left: 32rem;
+  position: absolute;
+  transform: scale(2);
+  transform: scaleX(1.5);
 }
 
 .allProductsWrapper {
@@ -92,18 +105,33 @@
   .storeCubeImagesTwo {
     margin-left: 68rem;
   }
+  .storeBackgroundWrapper {
+    margin-left: 10rem;
+  }
 }
 
 /* desktop-1600px */
 @media screen and (min-width: 1600px) {
+  .mainStoreTitleWrapper {
+    padding-bottom: 1rem;
+  }
   .storeCubeImagesWrapper {
     margin-left: 7rem;
+    margin-top: 3.5rem;
+  }
+  .storeBackground {
+    margin-left: 41.5rem;
+    margin-top: -11rem;
   }
 }
 
 /* tablet-834px */
 @media screen and (max-width: 834px) {
+  .mainStoreTitleWrapper {
+    padding-bottom: 0.5rem;
+  }
   .storeCubeImagesWrapper {
+    margin-top: 4rem;
     margin-left: -16rem;
   }
   .storeCubeImagesOne {
@@ -114,10 +142,14 @@
     margin-left: 54rem;
   }
   .mainStoreTitle {
-    font-size: 1.7rem;
+    font-size: 1.65rem;
   }
   .mainStoreDescription {
     font-size: 0.9rem;
+  }
+  .storeBackground {
+    margin-top: -10rem;
+    margin-left: 18.5rem;
   }
 }
 
@@ -127,12 +159,16 @@
     padding-top: 9rem;
     padding-bottom: 3.3rem;
   }
-  .storeCubeImagesWrapper {
+  /* .storeCubeImagesWrapper {
     margin-left: -25rem;
-  }
+  } */
   .storeCubeImagesOne {
+    margin-left: 17.5rem;
+    margin-top: -13.5rem;
   }
   .storeCubeImagesTwo {
+    margin-left: 38rem;
+    margin-top: -8rem;
   }
   .mainStoreTitle {
     font-size: 1.38rem;
@@ -141,19 +177,39 @@
     font-size: 0.9rem;
   }
   .allProductsTitle {
-    margin-top: 2.5rem;
+    margin-top: 0.5rem;
     font-size: 1.1rem;
-    margin-bottom: -1rem;
+    margin-bottom: -0.5rem;
   }
   .cardBtnWrapper {
     margin-bottom: 3.5rem;
     margin-top: -4rem;
   }
+  .storeBackground {
+    margin-left: 5rem;
+    margin-top: -11rem;
+  }
+  .isShowProducts {
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    margin-top: -2rem;
+  }
 }
 
 /* mobile-393px */
 @media screen and (max-width: 393px) {
-  /* empty */
+  .storeCubeImagesOne {
+    margin-top: -13.5rem;
+  }
+  .storeCubeImagesTwo {
+    margin-left: 36.5rem;
+  }
+  .allProductsTitle {
+    margin-top: 0rem;
+  }
+  .isShowProducts {
+    font-size: 0.8rem;
+  }
 }
 
 /* mobile-375px */
@@ -161,8 +217,19 @@
   .mainStoreTitle {
     font-size: 1.25rem;
   }
+  .storeCubeImagesOne {
+    margin-top: -13rem;
+    margin-left: 17rem;
+  }
+  .storeCubeImagesTwo {
+    margin-left: 35.5rem;
+    margin-top: -8.5rem;
+  }
+  .storeBackground {
+    margin-top: -12rem;
+  }
   .allProductsTitle {
-    margin-top: 3rem;
+    margin-top: -0rem;
   }
 }
 
@@ -170,10 +237,22 @@
 @media screen and (max-width: 362px) {
   .mainStoreTitle {
     font-size: 1.3rem;
+    margin-left: 0.6rem;
+  }
+  .mainStoreDescription {
+    margin-left: 0.5rem;
   }
 }
 
 /* mobile-320px */
 @media screen and (max-width: 320px) {
-  /* empty */
+  .storeBackground {
+    margin-left: 2rem;
+  }
+  .storeCubeImagesWrapper {
+    display: none;
+  }
+  .isShowProducts {
+    font-size: 0.7rem;
+  }
 }

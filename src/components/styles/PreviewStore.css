@@ -155,6 +155,9 @@
   .homeStoreCardBtn {
     margin-top: 0.5rem;
   }
+  .homeStoreCardBtn {
+    margin-bottom: 3.5rem;
+  }
 }
 
 /* mobile-428px */

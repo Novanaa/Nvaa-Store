@@ -3,6 +3,7 @@ import "../styles/Navbar.css";
 import { useNavigate } from "react-router-dom";
 import Menu from "../assests/feather/menu.svg";
 import cart from "../assests/feather/shopping-cart.svg";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -26,7 +27,9 @@ function Navbar() {
               </p>
             </div>
             <figure className="navimagesWrapper">
-              <img src={cart} alt="cart" className="mobileNavCart" />
+              <Link to="/cart">
+                <img src={cart} alt="cart" className="mobileNavCart" />
+              </Link>
               <img
                 src={Menu}
                 alt="menu"
@@ -53,7 +56,9 @@ function Navbar() {
                 <li className="li-nav" onClick={() => navigate("/store")}>
                   Store
                 </li>
-                <img src={cart} alt="cart" className="navCart" />
+                <Link to="/cart">
+                  <img src={cart} alt="cart" className="navCart" />
+                </Link>
                 <input
                   type="search"
                   placeholder="Search products"
