@@ -8,8 +8,7 @@
     rgba(128, 0, 128, 0.1) 75%,
     rgba(240, 245, 246, 1) 100%
   );
-  display: grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
   justify-content: space-around;
   padding: 3rem 0rem;
 }
@@ -35,7 +34,12 @@
 }
 .secondaryFooterPage {
   font-size: 0.8rem;
-  opacity: 0.9;
+  opacity: 0.8;
+  transition: all 0.2s;
+}
+.secondaryFooterPage:hover {
+  font-size: 0.82rem;
+  opacity: 1;
 }
 .thirdFooterSectionWrapper {
   display: flex;
@@ -49,8 +53,14 @@
   opacity: 0.7;
 }
 .thirdFooterLink {
+  cursor: pointer;
   font-size: 0.8rem;
-  opacity: 0.9;
+  opacity: 0.8;
+  transition: all 0.2s;
+}
+.thirdFooterLink:hover {
+  font-size: 0.82rem;
+  opacity: 1;
 }
 
 /* media queries */
@@ -92,16 +102,30 @@
 @media screen and (max-width: 428px) {
   .footerWrapper {
     display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 1.1rem;
+    padding: 2.8rem 0rem;
+  }
+  .mainFooterSectionWrapper {
+    width: 100%;
   }
   .footerMainTitle {
     font-size: 1.1rem;
   }
   .footerMainCopyright {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
+  }
+  div.secondaryFooterSectionWrapper .thirdFooterSectionWrapper {
+    display: flex;
   }
   .secondaryFooterTitle {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
+  .thirdFooterTitle {
+    font-size: 1rem;
+  }
+}
+
+/* mobile-393px */
+@media screen and (max-width: 393px) {
 }

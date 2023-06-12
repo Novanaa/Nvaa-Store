@@ -1,10 +1,11 @@
 import React from "react";
-import Navbar from "../pagesComponent/Navbar";
 
 function Cart() {
   return (
     <>
-      <Navbar />
+      <div>
+        <div></div>
+      </div>
     </>
   );
 }

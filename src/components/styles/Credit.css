@@ -246,7 +246,7 @@
 /* mobile-362px */
 @media screen and (max-width: 362px) {
   .credit {
-    margin-top: 10rem;
+    margin-top: 9rem;
   }
   .creditWrapper {
     margin: 0rem -3.5rem;
@@ -261,7 +261,7 @@
     margin-left: -4rem;
   }
   .creditCubeImagesTwo {
-    margin-top: 12rem;
+    margin-top: 12.5rem;
     margin-left: 4.5rem;
   }
 }

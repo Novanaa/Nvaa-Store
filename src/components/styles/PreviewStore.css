@@ -163,7 +163,7 @@
 /* mobile-428px */
 @media screen and (max-width: 428px) {
   .titleContainer {
-    padding-top: 8rem;
+    padding-top: 9rem;
   }
   .mainTitle {
     font-size: 1.38rem;
@@ -176,6 +176,9 @@
   }
   .homeStoreCardBtn {
     margin-top: -0.5rem;
+  }
+  .cardImages {
+    top: 61px;
   }
 }
 
@@ -213,7 +216,10 @@
   .cardWrapper {
     padding: 2rem;
     width: 19rem;
-    height: 24rem;
+    height: 23rem;
+  }
+  .cardImages {
+    top: 56px;
   }
 }
 

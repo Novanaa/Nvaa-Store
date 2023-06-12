@@ -8,9 +8,11 @@ import { Link } from "react-router-dom";
 function Navbar() {
   const navigate = useNavigate();
   const [values, setValues] = useState(false);
+  const [open, setOpen] = useState(false);
 
   window.addEventListener("scroll", (scroll) => {
     setValues(false);
+    setOpen(false);
   });
 
   return (
@@ -27,9 +29,7 @@ function Navbar() {
               </p>
             </div>
             <figure className="navimagesWrapper">
-              <Link to="/cart">
-                <img src={cart} alt="cart" className="mobileNavCart" />
-              </Link>
+              <img src={cart} alt="cart" className="mobileNavCart" />
               <img
                 src={Menu}
                 alt="menu"
@@ -56,9 +56,12 @@ function Navbar() {
                 <li className="li-nav" onClick={() => navigate("/store")}>
                   Store
                 </li>
-                <Link to="/cart">
-                  <img src={cart} alt="cart" className="navCart" />
-                </Link>
+                <img
+                  src={cart}
+                  alt="cart"
+                  className="navCart"
+                  onClick={() => setOpen(!open)}
+                />
                 <input
                   type="search"
                   placeholder="Search products"
@@ -66,7 +69,29 @@ function Navbar() {
                 />
               </ul>
               <div className="navCartMenuWrapper">
-                <div className="navCartMenu"></div>
+                <div
+                  className={`navCartIndicator ${
+                    open ? `navCartActive` : `navCartInactive`
+                  }`}
+                ></div>
+                <div
+                  className={`navCartMenu shadow-2xl ${
+                    open ? `navCartActive` : `navCartInactive`
+                  }`}
+                >
+                  <div className="cartTitleWrapper">
+                    <p className="cartTitle">My Carts</p>
+                  </div>
+                  <div className="navCartContentWrapper">
+                    <p>No products yet.</p>
+                  </div>
+                  <div className="navCartLinkWrapper">
+                    <Link to="/cart">
+                      <p className="cartTitleLink">See all</p>
+                    </Link>
+                    <p className="cartTitleLink">Clear</p>
+                  </div>
+                </div>
               </div>
             </nav>
           </nav>

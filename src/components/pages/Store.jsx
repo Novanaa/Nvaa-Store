@@ -78,11 +78,18 @@ function Store() {
     );
   };
 
-  const AllProductsTitle = () => {
+  const Products = () => {
     return (
       <>
-        <div className="allProductsWrapper">
-          <p className="allProductsTitle">All Products</p>
+        <div className="products">
+          <div className="productsCon">
+            <div className="productsWrapper">
+              <div className="allProductsWrapper">
+                <p className="allProductsTitle">All Products</p>
+              </div>
+              <div className="productsCategoryWrapper"></div>
+            </div>
+          </div>
         </div>
       </>
     );
@@ -131,7 +138,7 @@ function Store() {
     <>
       <Navbar />
       <StoreTitle />
-      <AllProductsTitle />
+      <Products />
       <div className="cardComponent">
         <div className="cardContainer">
           <ShowDatas />

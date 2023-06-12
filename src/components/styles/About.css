@@ -1,4 +1,164 @@
 .about {
-  padding-top: 10rem;
-  margin: 0rem 5.5rem;
+  margin-top: 9.5rem;
+  height: 75vh;
+}
+.aboutWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.aboutHeader {
+  font-size: 2rem;
+  opacity: 0.7;
+  font-weight: 500;
+}
+.aboutSpan {
+  font-weight: 700;
+}
+.aboutProfileImages {
+  margin-top: 1.6rem;
+  width: 11rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: width 0.3s;
+  border: 0.5px rgb(213, 212, 212) solid;
+}
+.aboutProfileImages:hover {
+  width: 11.3rem;
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color),
+    0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.aboutName {
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+.aboutName span {
+  color: black;
+  font-weight: 500;
+}
+.aboutTitle {
+  opacity: 0.8;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.aboutLinkWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  margin: 0.8rem 0rem;
+}
+.aboutLink {
+  width: 85%;
+  transition: all 0.2s;
+}
+.aboutLink:hover {
+  width: 90%;
+}
+.aboutBackgroundWrapper {
+  position: absolute;
+  transform: scale(1.6);
+  opacity: 0.6;
+  z-index: -5;
+}
+
+/* media queries */
+/* tablet-834px */
+@media screen and (max-width: 834px) {
+  .aboutHeader {
+    font-size: 1.6rem;
+  }
+  .aboutProfileImages {
+    width: 10rem;
+  }
+  .aboutProfileImages:hover {
+    width: 10.3rem;
+  }
+  .aboutName {
+    font-size: 1.1rem;
+  }
+  .aboutTitle {
+    font-size: 0.85rem;
+  }
+}
+
+/* mobile-428px */
+@media screen and (max-width: 428px) {
+  .aboutHeader {
+    font-size: 1.48rem;
+  }
+  .aboutProfileImages {
+    width: 9.5rem;
+  }
+  .aboutProfileImages:hover {
+    width: 9.8rem;
+  }
+  .aboutLinkWrapper {
+    margin: 0.5rem 0rem;
+  }
+  .aboutBackgroundWrapper {
+    transform: scale(1.3);
+    opacity: 0.9;
+  }
+}
+
+/* mobile-393px */
+@media screen and (max-width: 393px) {
+  .aboutHeader {
+    font-size: 1.4rem;
+  }
+  .aboutProfileImages {
+    width: 9rem;
+  }
+  .aboutProfileImages:hover {
+    width: 9.3rem;
+  }
+  .aboutName {
+    font-size: 1.05rem;
+  }
+  .aboutTitle {
+    font-size: 0.8rem;
+  }
+}
+
+/* mobile-375px */
+@media screen and (max-width: 375px) {
+  .aboutHeader {
+    font-size: 1.38rem;
+  }
+  .aboutProfileImages {
+    width: 8.8rem;
+  }
+  .aboutProfileImages:hover {
+    width: 9.1rem;
+  }
+}
+
+/* mobile-362px */
+@media screen and (max-width: 362px) {
+  .aboutHeader {
+    font-size: 1.35rem;
+  }
+  .aboutProfileImages {
+    width: 8.6rem;
+  }
+  .aboutProfileImages:hover {
+    width: 8.9rem;
+  }
+  .aboutBackgroundWrapper {
+    transform: scale(1.2);
+  }
+}
+
+/* mobile-320px */
+@media screen and (max-width: 320px) {
+  .aboutBackgroundWrapper {
+    transform: scale(1.1);
+  }
 }

@@ -37,7 +37,6 @@
 }
 .navCart {
   cursor: pointer;
-  margin-top: 0.5rem;
 }
 .ul-nav input {
   margin-top: 0.09rem;
@@ -58,6 +57,72 @@ input:hover {
 }
 input:focus {
   outline: none;
+}
+
+.navCartMenuWrapper {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+.navCartMenu {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: #ffffff;
+  padding: 0.8rem 18rem 0rem 1rem;
+  height: 70vh;
+  margin-right: 2rem;
+  margin-top: 0.8rem;
+  border-radius: 7px;
+}
+.navCartIndicator {
+  width: 1.5rem;
+  height: 1.5rem;
+  rotate: 45deg;
+  right: 19.8rem;
+  position: absolute;
+  top: 4.3rem;
+  background-color: white;
+}
+.cartTitleWrapper {
+  border-bottom: 1.5px black solid;
+}
+.cartTitle {
+  text-align: start;
+}
+.navCartContentWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  height: 80%;
+  position: absolute;
+}
+.navCartLinkWrapper {
+  height: 7.5rem;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  gap: 1rem;
+  position: fixed;
+  bottom: 8px;
+}
+.cartTitleLink {
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: rgb(184, 4, 184);
+  transition: all 0.2s;
+}
+.cartTitleLink:nth-child(2) {
+}
+.cartTitleLink:hover {
+  color: rgb(227, 0, 227);
+}
+
+.navCartActive {
+  transform: scale(1);
+}
+.navCartInactive {
+  transform: scale(0);
 }
 
 .menuImages {
@@ -171,7 +236,7 @@ input:focus {
     z-index: 3;
   }
   .mobileNavCart {
-    margin-top: 0.5rem;
+    margin-top: 0.4rem;
     display: block;
     position: relative;
     z-index: 1;
@@ -187,6 +252,9 @@ input:focus {
     display: flex;
     justify-content: end;
     gap: 1.2rem;
+  }
+  .navCartMenuWrapper {
+    display: none;
   }
 }
 

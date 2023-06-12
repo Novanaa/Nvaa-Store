@@ -120,7 +120,7 @@ export const CubeStyle = styled.img`
   cursor: pointer;
   transition: width 0.3s;
   width: 2.3rem;
-  animation: floating 5s ease-in-out infinite;
+  animation: floating 7s ease-in-out infinite;
   @keyframes floating {
     0% {
       transform: translate(0, 0px);
@@ -162,3 +162,4 @@ export const CubeStyle = styled.img`
 // Social Media link
 export const ins = "https://www.instagram.com/thenavyowll/?igshid=ZDdkNTZiNTM";
 export const fb = "https://www.facebook.com/profile.php?id=100077631759181";
+export const git = "https://github.com/ItsNvaa";
