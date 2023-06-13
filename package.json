@@ -12,6 +12,7 @@
   "dependencies": {
     "daisyui": "^3.0.2",
     "feather-icons": "^4.29.0",
+    "json-server": "^0.17.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-lazy-load-image-component": "^1.5.6",
