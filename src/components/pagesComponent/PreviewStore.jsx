@@ -3,16 +3,11 @@ import { useState, useEffect } from "react";
 import "../styles/PreviewStore.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import {
-  BtnStyle,
-  Background,
-  BackgroundWrapper,
-} from "../styles/GlobalStyled";
+import { BtnStyle } from "../styles/GlobalStyled";
 import { Link } from "react-router-dom";
 
 function PreviewStore() {
   const endpoint = import.meta.env.VITE_ENDPOINT;
-
   const [limitProducts, setLimitProducts] = useState([]);
   const previewProducts = async () => {
     const productsLimitRespone = await fetch(`${endpoint}?limit=10`);
@@ -46,23 +41,25 @@ function PreviewStore() {
   const ResultDatas = () => {
     return limitProducts.slice(0, 9).map((result, index) => {
       return (
-        <div className="cardWrapper shadow-xl hover:shadow-2xl" key={index}>
-          <div className="cardImagesWrapper">
-            <LazyLoadImage
-              src={result.image}
-              effect="blur"
-              className="cardImages"
-            />
-          </div>
-          <div className="cardText">
-            <p className="cardTitle">{result.title}</p>
-            <p className="cardPrice">${result.price}</p>
-            <p className="cardDescription">{result.description}</p>
-            <div className="cardCategoryWrapper">
-              <p className="cardCategory">{result.category}</p>
+        <Link to={`/products/${result.id}`} key={index}>
+          <div className="cardWrapper shadow-xl hover:shadow-2xl" key={index}>
+            <div className="cardImagesWrapper">
+              <LazyLoadImage
+                src={result.image}
+                effect="blur"
+                className="cardImages"
+              />
+            </div>
+            <div className="cardText">
+              <p className="cardTitle">{result.title}</p>
+              <p className="cardPrice">${result.price}</p>
+              <p className="cardDescription">{result.description}</p>
+              <div className="cardCategoryWrapper">
+                <p className="cardCategory">{result.category}</p>
+              </div>
             </div>
           </div>
-        </div>
+        </Link>
       );
     });
   };

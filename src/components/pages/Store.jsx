@@ -13,6 +13,7 @@ import {
 import "../styles/PreviewStore.css";
 import "../styles/Store.css";
 import CubeImages from "../assests/feather/box.svg";
+import { Link } from "react-router-dom";
 
 function Store() {
   const [allProducts, setAllProducts] = useState([]);
@@ -31,23 +32,36 @@ function Store() {
   const ShowDatas = () => {
     return allProducts.slice(0, showValues).map((result, index) => {
       return (
-        <div className="cardWrapper shadow-xl hover:shadow-2xl" key={index}>
-          <div className="cardImagesWrapper">
-            <LazyLoadImage
-              src={result.image}
-              effect="blur"
-              className="cardImages"
-            />
-          </div>
-          <div className="cardText">
-            <p className="cardTitle">{result.title}</p>
-            <p className="cardPrice">${result.price}</p>
-            <p className="cardDescription">{result.description}</p>
-            <div className="cardCategoryWrapper">
-              <p className="cardCategory">{result.category}</p>
+        <Link to={`/products/${result.id}`} key={index}>
+          <div className="cardWrapper shadow-xl hover:shadow-2xl">
+            <div className="cardImagesWrapper">
+              <LazyLoadImage
+                src={result.image}
+                effect="blur"
+                className="cardImages"
+              />
+            </div>
+            <div className="cardText">
+              <p className="cardTitle">{result.title}</p>
+              <p className="cardPrice">${result.price}</p>
+              {/* {[result.rating].map((items, i) => {
+                if (items?.rate) {
+                  return (
+                    <p className="cartSales" key={i}>
+                      {items.count}pcs sold
+                    </p>
+                  );
+                } else {
+                  return null;
+                }
+              })} */}
+              <p className="cardDescription">{result.description}</p>
+              <div className="cardCategoryWrapper">
+                <p className="cardCategory">{result.category}</p>
+              </div>
             </div>
           </div>
-        </div>
+        </Link>
       );
     });
   };

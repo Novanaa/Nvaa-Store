@@ -45,7 +45,11 @@ export const BtnStyle = styled.button`
   padding: 8px;
   border-radius: 6px;
   font-size: 0.9rem;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s;
+  &:hover {
+    transform: translateY(-5%);
+  }
 
   @media (max-width: 834px) {
     padding: 6px;
@@ -81,10 +85,14 @@ export const SecondaryBtn = styled.button`
   border-radius: 6px;
   font-size: 0.9rem;
   width: 8.5rem;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.15);
   padding: 8px;
   border: 1px solid purple;
   color: purple;
+  transition: all 0.2s;
+  &:hover {
+    transform: translateY(-5%);
+  }
 
   @media (max-width: 834px) {
     width: 7.8rem;
