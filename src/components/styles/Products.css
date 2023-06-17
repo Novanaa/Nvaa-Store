@@ -283,7 +283,7 @@
 /* mobile-362px */
 @media screen and (max-width: 362px) {
   .productsDetail {
-    height: 140vh;
+    height: 150vh;
   }
   .productsImagesWrapper {
     width: 15.8rem;
